@@ -1,0 +1,387 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: mukta, sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+#logo-header {
+    width: 70px;
+}
+
+header a {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #c51111;
+    transition: 0.3s ease-in-out;
+}
+
+#logo {
+    width: 350px;
+    height: auto;
+}
+
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 40%;
+    padding: 100px;
+}
+
+#caixa-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+#mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(109deg,
+            rgba(10, 12, 16, 0.98) 10%,
+            rgba(10, 12, 16, 0.72) 50%,
+            rgba(10, 12, 16, 0.98) 90%);
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+#mario {
+    width: 500px;
+    height: auto;
+}
+
+button {
+    padding: 15px 30px;
+    width: 200px;
+    height: 50px;
+    font-weight: bold;
+    background-color: #c51111;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+p {
+    font-size: 20px;
+    color: white;
+}
+
+body {
+    height: 100vh;
+}
+
+.caixa-principal {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+#whatsapp {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+
+#whatsapp a,
+#link-whatsapp {
+    cursor: pointer;
+}
+
+#whatsapp img {
+    height: 60px;
+}
+
+.services-section {
+    max-width: 1200px;
+    margin: 20px auto 80px;
+    padding: 0 20px 80px;
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.services-section h1 {
+    margin-bottom: 25px;
+    font-size: 36px;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    padding: 24px;
+    backdrop-filter: blur(10px);
+}
+
+.service-card h2 {
+    margin: 18px 0 12px;
+    font-size: 30px;
+}
+
+.service-card ul {
+    list-style: none;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    color: #eaeaea;
+    font-size: 20px;
+}
+
+.service-card ul li {
+    position: relative;
+    padding-left: 32px;
+}
+
+.service-card ul li::before {
+    content: "🔧";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 18px;
+}
+
+.service-encanador ul li::before {
+    content: "💧";
+}
+
+.service-eletricista ul li::before {
+    content: "⚡";
+}
+
+.service-pedreiro ul li::before {
+    content: "🧱";
+}
+
+.service-serralheiro ul li::before {
+    content: "🔩";
+}
+
+.service-marceneiro ul li::before {
+    content: "🛠️";
+}
+
+.service-photo {
+    height: 180px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cccccc;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.service-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 12px;
+    display: block;
+}
+@media (max-width: 960px) {
+    header {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .caixa-principal {
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        padding: 20px;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .conteiner {
+        width: 100%;
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    #mario {
+        width: 320px;
+        max-width: 100%;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+}
+
+@media (max-width: 680px) {
+    header {
+        padding: 15px;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    header a {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    #caixa-video {
+        width: 100%;
+        height: 100%;
+    }
+
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #logo {
+        width: 260px;
+    }
+
+    .conteiner {
+        padding: 20px 15px;
+    }
+
+    .conteiner p {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    button {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    #mario {
+        display: none;
+    }
+
+    #whatsapp {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    #whatsapp img {
+        height: 50px;
+    }
+
+    form {
+        width: calc(100% - 30px);
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 18px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-section {
+        margin: 20px auto 100px;
+        padding: 0 15px 100px;
+    }
+
+    .services-section h1 {
+        font-size: 28px;
+    }
+
+    .service-card {
+        padding: 18px;
+    }
+
+    .service-card ul {
+        font-size: 18px;
+    }
+}
+
+form {
+    position: fixed;
+    top: 50%;
+    left: -172px;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s left ease-in-out;
+    gap: 20px;
+    width: 350px;
+    z-index: 1;
+}
+
+form input {
+    height: 40px;
+    padding-left: 5px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    outline-color: #18d80f;
+}
+
+form textarea {
+    height: 100px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    outline-color: #18d80f;
+}
+
+*.mascara-formulario {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(109deg,
+    rgba(10, 12, 16, 0.99) 15%,
+    rgba(10, 12, 16, 0.7) 50%,
+    rgba(10, 12, 16, 0.99) 85%);
+    visibility: hidden;
+    transition: 0.3s visibility ease-in-out;
+}
